@@ -7,56 +7,58 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script defer src="script.js"></script>
     <link rel="stylesheet" href="style.css" type="text/css" />
+    <link rel="stylesheet" href="element.css" type="text/css" />
     <title>Currency converter</title>
     <meta property="og:image" content="images/share.png">
     <link rel="icon" href="images/logo_black.png">
 </head>
 
-<body>
-    <main>
-        <div class="container">
-            <section class="calculatorField">
-                <header class="calculatorField_header">통화를 변환</header>
-                <form class="js-form" method="get">
-                    <fieldset class="form__fieldset">
-                        <legend class="calculatorLegend">Przelicz wony południowokoreańskie na złotówki</legend>
-                        <p class=form__paragraph>
-                            <label>
-                                <h3>Wybierz Walutę</h3>
-                                <select class="js-form__currencySelect form__currencySelect">
-                                    <option class="js-form_ResPLN" value="PLN">PLN</option>
-                                    <option class="js-form_ResKRW" value="KRW" selected>Won południowokoreański</option>
-                                </select>
-                            </label>
-                        </p>
-                        <p class=form__paragraph>
-                            <label>
-                                Wpisz wartość <input class="js-form__amount form__input" required type="number"
-                                    name="amount" min="0.1" step="any">
-                            </label>
-                        </p>
-                        <p class=form__paragraph>
-                            <label class="js-form__PLN form__PLN" id=PLN>
-                                Kurs PLN: <input class="js-form__inputPLN form__input" type="number" min="0.0001"
-                                    step="any" value="299.34">
-                            </label>
-                            
-                            <label class="js-form__KRW form__KRW" id=KRW>
-                                Kurs KRW: <input class="js-form__inputKRW form__input" type="number" min="0.0001"
-                                    step="any" value="0.0033">
-                            </label>
-                        </p>
-                    </fieldset>
-                    <p class=form__paragraph>
-                        <button class="form__button">Przelicz!</button>
-                        <button class="form__button" type="reset">Wyczyść</button>
-                    </p>
-                    <p class=form__result>Twój wynik: <strong class="js-form__result">N/A</strong></p>
-                </form>
-            </section>
-        </div>
-    </main>
+<body class="element">
+        <main class>
+            <div class="container">
+                <section class="calculatorField">
+                    <header class="calculatorField_header">통화를 변환</header>
+                    <form class="js-form" method="get">
+                        <fieldset class="form__fieldset">
+                            <legend class="calculatorLegend">Przelicz wony południowokoreańskie na złotówki</legend>
+                            <p class=form__paragraph>
+                                <label>
+                                    <h3>Wybierz Walutę</h3>
+                                    <select class="js-form__currencySelect form__currencySelect">
+                                        <option class="js-form_ResPLN" value="PLN">PLN</option>
+                                        <option class="js-form_ResKRW" value="KRW" selected>Won południowokoreański
+                                        </option>
+                                    </select>
+                                </label>
+                            </p>
+                            <p class=form__paragraph>
+                                <label>
+                                    Wpisz wartość <input class="js-form__amount form__input" required type="number"
+                                        name="amount" min="0.1" step="any">
+                                </label>
+                            </p>
+                            <p class=form__paragraph>
+                                <label class="js-form__PLN form__PLN" id=PLN>
+                                    Kurs PLN: <input class="js-form__inputPLN form__input" type="number" min="0.0001"
+                                        step="any" value="299.34">
+                                </label>
 
+                                <label class="js-form__KRW form__KRW" id=KRW>
+                                    Kurs KRW: <input class="js-form__inputKRW form__input" type="number" min="0.0001"
+                                        step="any" value="0.0033">
+                                </label>
+                            </p>
+                        </fieldset>
+                        <p class=form__paragraph>
+                            <button class="form__button">Przelicz!</button>
+                            <button class="form__button" type="reset">Wyczyść</button>
+                        </p>
+                        <p class=form__result>Twój wynik: <strong class="js-form__result">N/A</strong></p>
+                    </form>
+                </section>
+            </div>
+        </main>
+   
 </body>
 
 </html>
