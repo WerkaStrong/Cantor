@@ -24,8 +24,6 @@
         });
     }
 
-    changeLabels();
-
     const onFormSubmit = () => {
         formElement.addEventListener("submit", (event) => {
             event.preventDefault();
@@ -42,13 +40,17 @@
         });
     }
 
-    onFormSubmit();
-
     const resetResult = () => {
         formElement.addEventListener("reset", () => {
             resultElement.innerText = "N/A";
         });
     }
 
-    resetResult();
+    const init = () => {
+        onFormSubmit();
+        resetResult();
+        changeLabels();
+    }
+
+    init();
 }
