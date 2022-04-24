@@ -1,11 +1,10 @@
 {
     let currencyElement = document.querySelector(".js-form__inputPLN");
-    
+
     const formElement = document.querySelector(".js-form");
     const selectElement = document.querySelector(".js-form__currencySelect");
     const resultElement = document.querySelector(".js-form__result");
 
-    
     const changeLabels = () => {
         formElement.addEventListener("input", () => {
             switch (selectElement.value) {
@@ -30,15 +29,15 @@
     const onFormSubmit = () => {
         formElement.addEventListener("submit", (event) => {
             event.preventDefault();
-    
+
             const amountElement = document.querySelector(".js-form__amount");
-            
+
             const amount = +amountElement.value;
             const currency = currencyElement.value;
-            
-    
+
+
             const result = amount * currency;
-    
+
             resultElement.innerText = result.toFixed(4) + " " + currencyText;
         });
     }
@@ -50,6 +49,6 @@
             resultElement.innerText = "N/A";
         });
     }
-    
+
     resetResult();
 }
