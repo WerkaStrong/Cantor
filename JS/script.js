@@ -1,5 +1,5 @@
 {
-    let currencyElement = document.querySelector(".js-form__inputPLN");
+    let currencyElement = document.querySelector(".js-form__input");
 
     const formElement = document.querySelector(".js-form");
     const selectElement = document.querySelector(".js-form__currencySelect");
@@ -9,16 +9,15 @@
         formElement.addEventListener("input", () => {
             switch (selectElement.value) {
                 case "PLN":
-                    currencyElement = document.querySelector(".js-form__inputPLN");
-                    document.getElementById("KRW").style.display = "none";
-                    document.getElementById("PLN").style.display = "block";
+                    document.getElementById("myspan").textContent = "newtext";
                     currencyText = "KRW";
+                    currencyElement.value = "299.34";
                     break;
                 case "KRW":
-                    currencyElement = document.querySelector(".js-form__inputKRW");
-                    document.getElementById("PLN").style.display = "none";
-                    document.getElementById("KRW").style.display = "block";
+                    currencyElement = document.querySelector(".js-form__input");
+                    document.getElementById("myspan").textContent = "Kurs KRW";
                     currencyText = "PLN";
+                    currencyElement.value = "0.0033";
                     break;
             }
         });
@@ -29,11 +28,8 @@
             event.preventDefault();
 
             const amountElement = document.querySelector(".js-form__amount");
-
             const amount = +amountElement.value;
             const currency = currencyElement.value;
-
-
             const result = amount * currency;
 
             resultElement.innerText = result.toFixed(4) + " " + currencyText;
