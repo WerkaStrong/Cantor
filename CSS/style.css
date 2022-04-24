@@ -40,7 +40,7 @@ main{
     font-size: 60px;
 }
 
-.calculatorLegend{
+.form__legend{
     text-align: center;
 }
 
@@ -67,10 +67,6 @@ main{
     max-width:auto; 
     border-radius: 4px;
     font-family: "Lato";
-}
-
-.form__PLN{
-    display: none;
 }
 
 .form__button{
