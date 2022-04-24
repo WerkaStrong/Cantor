@@ -9,13 +9,13 @@
         formElement.addEventListener("input", () => {
             switch (selectElement.value) {
                 case "PLN":
-                    document.getElementById("currencyNam").innerText = "Kurs PLN";
+                    document.getElementById("currencyName").innerText = "Kurs PLN";
                     currencyText = "KRW";
                     currencyElement.value = "299.34";
                     break;
                 case "KRW":
                     currencyElement = document.querySelector(".js-form__input");
-                    document.getElementById("currencyNam").innerText = "Kurs KRW";
+                    document.getElementById("currencyName").innerText = "Kurs KRW";
                     currencyText = "PLN";
                     currencyElement.value = "0.0033";
                     break;
