@@ -9,4 +9,4 @@ This is a currency converter from Polish (PLN) to South Korean (KRW) and vice ve
 
 HTML, CSS and JS were used in the project.
 
-![screenshot](cantor_images/screenshot_cantor.PNG)
+![screenshot](CSS/images_cantor/screenshot_cantor.PNG)
